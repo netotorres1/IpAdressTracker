@@ -5,8 +5,8 @@ import icon from './../assets/images/icon'
 const Markerposititon = ({address}) => {
 
     const position = useMemo(() => {
-        return [address.location.lat, address.location.lng]
-    }, [address.location.lat, address.location.lng])
+        return [51.505, -0.09]
+    }, [51.505, -0.09])
     const map = useMap()
 
     useEffect(() => {
@@ -17,7 +17,7 @@ const Markerposititon = ({address}) => {
 
   return (
     <>
-        <Marker icon={icon} position={position}>
+        <Marker icon={icon} position={[51.505, -0.09]}>
                 <Popup>
                     A pretty CSS3 popup. <br /> Easily customizable.
                 </Popup>
